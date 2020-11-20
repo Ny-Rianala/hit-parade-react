@@ -1,3 +1,5 @@
-# Hiy Parade in React
+# Hit Parade in React
 
-I will document my amazing project
+I will document my amazing project in the future.
+
+

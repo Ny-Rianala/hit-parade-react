@@ -1,0 +1,15 @@
+1. List of link that will lead to each copmponents:
+    a. Popular songs: all the songs.
+    b. Styles
+    c. Add
+    d. Cart
+  -{Header.js }-
+
+2. Create components that only for only popular songs: X
+    a. heart icon(another component file) --{Heart.js}--
+    b. cart icon (another component file) -{Cart.js}--
+    c. Songs component: it includes: title, singer, upvotes, downvotes, lyrics --{ Songs.js }--
+    d. A component when we hit the lyrics icon we should we the lyrics
+
+3.Create a component that will handle the style: 
+    a. A link that will lead the user to goto the list which refers to it.(list of link that will open another page which is still in the style) 

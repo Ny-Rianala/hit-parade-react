@@ -1,0 +1,91 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+ a {
+    list-style: none;
+    text-decoration: none;
+    color: #6a6494;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: 1rem;
+}
+
+a:hover {
+    color: #272343;
+}
+
+
+li {
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+    background-color:#272343;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left:  4rem;
+    padding-right: 4rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    color: white;
+}
+
+span {
+    visibility: hidden;
+}
+
+.secondList{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+
+.secondList__one, .secondList__two {
+    margin-left: 3rem;
+    color: white;
+}
+
+.secondList__one:hover {
+    color: white;
+}
+
+.secondList__two:hover {
+    color: white;
+}
+
+.cart {
+    margin-left: 3rem;
+}
+
+.cart:hover {
+    color: white;
+}
+
+.favorite {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+}
+
+/*# sourceMappingURL=/hit-parade-react.9ad09f98.css.map */
