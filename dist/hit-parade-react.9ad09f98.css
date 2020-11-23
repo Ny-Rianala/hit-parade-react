@@ -19,7 +19,7 @@ body {
  a {
     list-style: none;
     text-decoration: none;
-    color: #6a6494;
+    /* color: #6a6494; */
     font-size: 20px;
     line-height: 27px;
     margin-left: 1rem;
@@ -34,6 +34,8 @@ li {
     list-style: none;
 }
 
+
+
 .list {
     display: flex;
     flex-direction: row;
@@ -43,12 +45,22 @@ li {
     padding-bottom: 1.5rem;
     padding-left:  4rem;
     padding-right: 4rem;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     border-radius: 5px;
     margin-bottom: 2rem;
     margin-right: 2rem;
+    margin-left: 2rem;
     color: white;
+}
+
+
+.firstList li:nth-of-type(1) {
+    font-size: 18px;
+}
+
+.firstList li:nth-of-type(2) {
+    font-size: 16px;
 }
 
 span {
@@ -61,6 +73,19 @@ span {
     margin-top: 1.5rem;
 }
 
+.secondList button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    background-color:#272343;
+    cursor: pointer;
+}
+
+
+
 .secondList__one, .secondList__two {
     margin-left: 3rem;
     color: white;
@@ -68,10 +93,12 @@ span {
 
 .secondList__one:hover {
     color: white;
+    background-color:  #FAAE2C;
 }
 
 .secondList__two:hover {
     color: white;
+    background-color:  #FAAE2C;
 }
 
 .cart {
@@ -82,10 +109,23 @@ span {
     color: white;
 }
 
-.favorite {
-    position: absolute;
-    left: 10%;
-    top: 20%;
+p {
+    margin-top: 2rem;
+}
+
+p:nth-of-type(3) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+
+.styleList {
+    display: flex;
+    flex-direction: column;
+}
+
+.styleList a{
+    color: black;
 }
 
 /*# sourceMappingURL=/hit-parade-react.9ad09f98.css.map */

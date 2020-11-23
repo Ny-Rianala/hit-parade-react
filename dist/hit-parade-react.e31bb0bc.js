@@ -33885,88 +33885,319 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songs.json":[function(require,module,exports) {
-module.exports = [{
-  "id": 1605788346143,
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = [{
+  id: 1605788346143,
   "title": "Anita",
-  "singer": "KIMIL",
+  "singer": "Kimil",
   "downvotes": 2,
   "upvotes": 3,
-  "style": "dance"
+  "style": "dance",
+  "isFavorite": "false"
 }, {
-  "id": 1605788833720,
-  "title": "Maria Tokiko",
-  "singer": "Ny Ainga",
+  id: 1605788833720,
+  "title": "Three Little Birds",
+  "singer": "Bob Marley",
   "downvotes": 1,
   "upvotes": 3,
-  "style": "Slow"
+  "style": "Reggae",
+  "isFavorite": "false"
 }, {
-  "id": 1605788847842,
-  "title": "Zaho sambatra",
-  "singer": "Rijade",
+  id: 1605788847842,
+  "title": "Do not worry be happy",
+  "singer": "Bobby McFerrin",
   "downvotes": 3,
   "upvotes": 2,
-  "style": "Salegy"
+  "style": "jazz",
+  "isFavorite": "false"
 }, {
-  "id": 1605788865738,
+  id: 1605788865738,
   "title": "Toky Fitia",
   "singer": "Ny Ainga",
   "downvotes": 2,
   "upvotes": 3,
-  "style": "slow"
+  "style": "slow",
+  "isFavorite": "false"
 }, {
-  "id": 1605788891233,
+  id: 1605871856691,
+  "title": "Indentity",
+  "singer": "Burning Spear",
+  "downvotes": 1,
+  "upvotes": 3,
+  "style": "Reggae",
+  "isFavorite": "false"
+}, {
+  id: 1605788891233,
   "title": "Kawitry",
   "singer": "Jerry Marcos",
   "downvotes": 2,
   "upvotes": 3,
-  "style": "kawitry"
+  "style": "kawitry",
+  "isFavorite": "false"
+}, {
+  id: 1605871818950,
+  "title": "Livin'on a prayer",
+  "singer": "Bon Jovi",
+  "downvotes": 2,
+  "upvotes": 3,
+  "style": "rock"
+}, {
+  id: 1605871799397,
+  "title": "Zah sambatra",
+  "singer": "Rijade",
+  "downvotes": 1,
+  "upvotes": 3,
+  "style": "slow",
+  "isFavorite": "false"
 }];
-;
-},{}],"pages/AllSongs.js":[function(require,module,exports) {
+exports.default = _default;
+},{}],"Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.Context = exports.ContextProvider = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _songs = _interopRequireDefault(require("../songs.json"));
+var _songs = _interopRequireDefault(require("./songs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function AllSongs() {
-  var allPopularSongs = _songs.default.map(function (Song) {
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Context = _react.default.createContext();
+
+exports.Context = Context;
+
+var ContextProvider = function ContextProvider(_ref) {
+  var children = _ref.children;
+
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      songs = _useState2[0],
+      setSongs = _useState2[1];
+
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      cartItems = _useState4[0],
+      setCartItems = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    setSongs(_songs.default);
+  }, []); // console.log(songs);
+  //Unfill and fill the heart
+
+  function toggleFavorite(id) {
+    var newSongsArr = songs.map(function (song) {
+      if (song.id === id) {
+        return _objectSpread(_objectSpread({}, song), {}, {
+          isFavorite: !song.isFavorite
+        });
+      }
+
+      return _objectSpread({}, song);
+    });
+    setSongs(newSongsArr);
+  }
+
+  function addToCart(song) {
+    setCartItems(function (prevItems) {
+      return [].concat(_toConsumableArray(prevItems), [song]);
+    });
+  }
+
+  function removeFromCart(songId) {
+    setCartItems(function (prevItems) {
+      return prevItems.filter(function (item) {
+        return item.id !== songId;
+      });
+    });
+  }
+
+  return /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      songs: songs,
+      toggleFavorite: toggleFavorite,
+      addToCart: addToCart,
+      removeFromCart: removeFromCart,
+      cartItems: cartItems
+    }
+  }, children);
+};
+
+exports.ContextProvider = ContextProvider;
+},{"react":"node_modules/react/index.js","./songs":"songs.js"}],"components/SongsList.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var SongsList = function SongsList(_ref) {
+  var song = _ref.song;
+
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs,
+      toggleFavorite = _useContext.toggleFavorite,
+      removeFromCart = _useContext.removeFromCart;
+
+  console.log(toggleFavorite);
+
+  function heartIcon() {
+    if (song.isFavorite) {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        },
+        className: "ri-heart-fill favorite"
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("i", {
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        },
+        className: "ri-heart-line favorite"
+      });
+    }
+  } // function cartIcon() {
+  // 	const alreadyInCart = cartItems.some(cartItem => cartItem.id === song.id)
+  //     if (alreadyInCart ){   
+  //         return (
+  //            <i onClick={() => removeFromCart(song.id)} className="ri-cart-fill cart"></i>
+  //         )
+  //     }else {
+  //         return (
+  //            <i onClick={() => addToCart(song)} className="ri-cart-line cart"></i>
+  //         );
+  //     }
+  // }
+
+
+  return /*#__PURE__*/_react.default.createElement("div", null, heartIcon());
+};
+
+var _default = SongsList; // import React, { useContext } from 'react';
+// import { Context }  from "../Context";
+// import PopularSongs from '../pages/PopularSongs';
+// function  SongsList() {
+// 	const context = useContext(Context);
+// 	const getAllSongs = context.Songs.map((songs, index) => {
+// 		return	<PopularSongs key={songs.id} photo={songs} />
+// 	}) 
+// 	return (
+// 		<main className="photos">
+// 			{getAllSongs}
+// 		</main>
+// 	);
+// }
+// export default SongsList;
+
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Context":"Context.js"}],"pages/PopularSongs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context");
+
+var _SongsList = _interopRequireDefault(require("../components/SongsList"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var PopularSongs = function PopularSongs(_ref) {
+  var song = _ref.song;
+
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs;
+
+  console.log(songs); //use use context here
+  // const [] = useState(song.upvotes);
+  // const [] = useState(song.downvotes);
+  // function increment() {
+  //     topic.upvotes++;
+  //     song([...Songs]);
+  //  }
+  //  function decrement() {
+  //      song.downvotes++;
+  //      setSongs([...Songs])
+  //  }
+
+  var allPopularSongs = songs.map(function (Song) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: Song.id,
       className: "list"
-    }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("i", {
-      class: "ri-heart-line"
-    })), /*#__PURE__*/_react.default.createElement("ul", {
+    }, /*#__PURE__*/_react.default.createElement(_SongsList.default, {
+      song: Song
+    }), /*#__PURE__*/_react.default.createElement("ul", {
       className: "firstList"
-    }, /*#__PURE__*/_react.default.createElement("li", null, Song.title), /*#__PURE__*/_react.default.createElement("li", null, Song.singer)), /*#__PURE__*/_react.default.createElement("ul", {
+    }, /*#__PURE__*/_react.default.createElement("li", null, Song.title), /*#__PURE__*/_react.default.createElement("li", null, Song.singer)), /*#__PURE__*/_react.default.createElement("div", {
       className: "secondList"
-    }, /*#__PURE__*/_react.default.createElement("li", {
+    }, /*#__PURE__*/_react.default.createElement("button", {
       className: "secondList__one"
-    }, Song.upvotes, /*#__PURE__*/_react.default.createElement("i", {
-      class: "ri-arrow-up-line"
-    })), /*#__PURE__*/_react.default.createElement("li", {
+    }, Song.upvotes), /*#__PURE__*/_react.default.createElement("button", {
       className: "secondList__two"
-    }, Song.downvotes, /*#__PURE__*/_react.default.createElement("i", {
-      class: "ri-arrow-down-line"
-    })), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("i", {
-      class: "ri-shopping-cart-2-line cart"
-    }))));
+    }, Song.downvotes)));
   });
-
   return /*#__PURE__*/_react.default.createElement("div", null, allPopularSongs);
-}
+};
 
-var _default = AllSongs;
+var _default = PopularSongs;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../songs.json":"songs.json"}],"pages/Styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../components/SongsList":"components/SongsList.js"}],"pages/Styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33975,16 +34206,70 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _songs = _interopRequireDefault(require("../songs"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Styles() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Styles"));
+  var songStyle = _songs.default.map(function (songstyle) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: songstyle.id
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/styles/".concat(songstyle.style)
+    }, "\uD83C\uDFA7", songstyle.style), /*#__PURE__*/_react.default.createElement("hr", null));
+  });
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "styleList"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, songStyle));
 }
 
 var _default = Styles;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/Add.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../songs":"songs.js"}],"pages/SongsDetails.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _songs = _interopRequireDefault(require("../songs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var SongsDetails = function SongsDetails() {
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      idParam = _useParams.idParam;
+
+  var song = _songs.default.find(function (song) {
+    return song.id === Number(idParam);
+  }); // console.log(song);
+  // Array.filter(song => song.style === idParam);
+
+
+  var songDetails = _songs.default.filter(function (song) {
+    return song.style === idParam;
+  }).map(function (songdetail) {
+    return songdetail.title;
+  });
+
+  SongsDetails.forEach(function (styles) {
+    console.log(styles);
+  });
+  return /*#__PURE__*/_react.default.createElement("div", null, songDetails(), /*#__PURE__*/_react.default.createElement("h1", null, song.title), /*#__PURE__*/_react.default.createElement("p", null, song.singer));
+};
+
+var _default = SongsDetails;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../songs":"songs.js"}],"pages/Add.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34034,9 +34319,11 @@ var _Header = _interopRequireDefault(require("./components/Header"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _AllSongs = _interopRequireDefault(require("./pages/AllSongs"));
+var _PopularSongs = _interopRequireDefault(require("./pages/PopularSongs"));
 
 var _Styles = _interopRequireDefault(require("./pages/Styles"));
+
+var _SongsDetails = _interopRequireDefault(require("./pages/SongsDetails"));
 
 var _Add = _interopRequireDefault(require("./pages/Add"));
 
@@ -34045,29 +34332,23 @@ var _Cart = _interopRequireDefault(require("./pages/Cart"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
-  }, /*#__PURE__*/_react.default.createElement(_AllSongs.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_PopularSongs.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/styles"
   }, /*#__PURE__*/_react.default.createElement(_Styles.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/add"
   }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)))));
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/styles/:idParam"
+  }, /*#__PURE__*/_react.default.createElement(_SongsDetails.default, null)))));
 }
 
-var _default = App; // const [songs, setSong] = useState([...Songs]); 
-//     return(
-//         <div>
-//             {songs.map((song => 
-//              (<li>{song.title}</li>)))}
-//         </div>
-//     )
-// }
-
+var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./components/Header":"components/Header.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/AllSongs":"pages/AllSongs.js","./pages/Styles":"pages/Styles.js","./pages/Add":"pages/Add.js","./pages/Cart":"pages/Cart.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./components/Header":"components/Header.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/PopularSongs":"pages/PopularSongs.js","./pages/Styles":"pages/Styles.js","./pages/SongsDetails":"pages/SongsDetails.js","./pages/Add":"pages/Add.js","./pages/Cart":"pages/Cart.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34078,11 +34359,12 @@ var _reactRouterDom = require("react-router-dom");
 
 var _App = _interopRequireDefault(require("./App"));
 
+var _Context = require("./Context");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import {ContextProvider}  from "./Context";
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App":"App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_Context.ContextProvider, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App":"App.js","./Context":"Context.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34110,7 +34392,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55608" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

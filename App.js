@@ -1,8 +1,9 @@
 import React from "react";
 import Header from './components/Header';
 import { Switch, Route } from 'react-router-dom';
-import AllSongs from "./pages/AllSongs";
+import AllSongs from "./pages/PopularSongs";
 import Styles from "./pages/Styles";
+import SongsDetails from "./pages/SongsDetails";
 import Add from "./pages/Add";
 import Cart from "./pages/Cart";
 
@@ -13,7 +14,7 @@ function App() {
         return(
             <>
             <Header />
-                <header>
+                <nav>
                     <Switch>
                        <Route exact path="/">
                             <AllSongs />
@@ -27,22 +28,13 @@ function App() {
                        <Route path="/cart">
                             <Cart />
                        </Route>
+                       <Route path="/styles/:idParam">
+                            <SongsDetails />
+                       </Route>
                     </Switch>
-                </header>
+                </nav>
             </>
         )
 }
 export default App;
 
-
-
-
-// const [songs, setSong] = useState([...Songs]); 
-
-//     return(
-//         <div>
-//             {songs.map((song => 
-//              (<li>{song.title}</li>)))}
-//         </div>
-//     )
-// }
